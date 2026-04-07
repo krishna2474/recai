@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RECAI - Smart Cooking AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍳 RECAI</h1>
+
+    <form action="/generate" method="POST">
+      <input 
+        type="text" 
+        name="prompt" 
+        placeholder="Enter dish (e.g. Paneer Butter Masala)" 
+        required
+      />
+      <button type="submit">Generate Recipe</button>
+    </form>
+
+    <% if (typeof recipe !== 'undefined' && recipe) { %>
+      <div class="result">
+        <h2>🍽️ Recipe Output</h2>
+        <pre><%= recipe %></pre>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>
